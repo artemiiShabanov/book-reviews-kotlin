@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" styleClass="background" stylesheets="@Theme.css" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChooseBookController">
+   <bottom>
+      <BorderPane prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <left>
+            <Button fx:id="selectBtn" defaultButton="true" mnemonicParsing="false" onAction="#handleSelect" prefWidth="100.0" text="Select" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="100.0" />
+               </BorderPane.margin></Button>
+         </left>
+         <right>
+            <Button fx:id="cancelBtn" mnemonicParsing="false" onAction="#handleCancel" prefWidth="100.0" text="Cancel" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="100.0" />
+               </BorderPane.margin></Button>
+         </right>
+      </BorderPane>
+   </bottom>
+   <center>
+      <TableView fx:id="bookTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="titleColumn" prefWidth="234.0" text="Title" />
+          <TableColumn fx:id="authorColumn" minWidth="0.0" prefWidth="245.0" text="Author" />
+        </columns>
+         <BorderPane.margin>
+            <Insets left="10.0" right="10.0" top="10.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+</BorderPane>
